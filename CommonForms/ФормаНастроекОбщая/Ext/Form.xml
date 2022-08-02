@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияТокен" id="4">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Введите токен или ключ ревизора</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияТокенКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДекорацияТокенРасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
+		<InputField name="Токен" id="1">
+			<DataPath>Токен</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<PasswordMode>true</PasswordMode>
+			<ContextMenu name="ТокенКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТокенРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Button name="ПолучитьНастройки" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПолучитьНастройки</CommandName>
+			<ExtendedTooltip name="ПолучитьНастройкиРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<InputField name="Магазин" id="9">
+			<DataPath>Магазин</DataPath>
+			<Enabled>false</Enabled>
+			<ContextMenu name="МагазинКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="11"/>
+		</InputField>
+		<UsualGroup name="ГруппаОбмен" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаОбменРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<InputField name="СпособОбмена" id="49">
+					<DataPath>СпособОбмена</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>API</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">api</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Каталог</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">shared</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СпособОбменаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="СпособОбменаРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">СпособОбменаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КаталогВыгрузки" id="52">
+					<DataPath>КаталогВыгрузки</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="54"/>
+					<Events>
+						<Event name="StartChoice">КаталогВыгрузкиНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметрыСканера" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры сканера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры сканера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаПараметрыСканераРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<InputField name="ActionName" id="14">
+					<DataPath>ActionName</DataPath>
+					<ContextMenu name="ActionNameКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ActionNameРасширеннаяПодсказка" id="16"/>
+					<Events>
+						<Event name="OnChange">ActionNameПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ExtraData" id="17">
+					<DataPath>ExtraData</DataPath>
+					<ContextMenu name="ExtraDataКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ExtraDataРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="OnChange">ExtraDataПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаДействияСоСканером" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа действия со сканером</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа действия со сканером</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДействияСоСканеромРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<Button name="ЗаполнитьПараметрыСканера" id="63">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьПараметрыСканера</CommandName>
+							<ExtendedTooltip name="ЗаполнитьПараметрыСканераРасширеннаяПодсказка" id="64"/>
+						</Button>
+						<Button name="ТестСканнера" id="55">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ТестСканнера</CommandName>
+							<ExtendedTooltip name="ТестСканнераРасширеннаяПодсказка" id="56"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодключениеКЦентру" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>API</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключение к центру</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаПодключениеКЦентруРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<InputField name="Сервер" id="22">
+					<DataPath>Сервер</DataPath>
+					<ContextMenu name="СерверКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">СерверПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДополнительныйСервер" id="33">
+					<DataPath>ДополнительныйСервер</DataPath>
+					<ContextMenu name="ДополнительныйСерверКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ДополнительныйСерверРасширеннаяПодсказка" id="35"/>
+					<Events>
+						<Event name="OnChange">ДополнительныйСерверПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Порт" id="25">
+					<DataPath>Порт</DataPath>
+					<ContextMenu name="ПортКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПортРасширеннаяПодсказка" id="27"/>
+					<Events>
+						<Event name="OnChange">ПортПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Ресурс" id="28">
+					<DataPath>Ресурс</DataPath>
+					<ContextMenu name="РесурсКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="РесурсРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="OnChange">РесурсПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаКартинки" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа картинки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКартинкиРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<InputField name="СерверКартинок" id="44">
+							<DataPath>СерверКартинок</DataPath>
+							<ContextMenu name="СерверКартинокКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="СерверКартинокРасширеннаяПодсказка" id="46"/>
+							<Events>
+								<Event name="OnChange">СерверКартинокПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="РесурсКартинок" id="41">
+							<DataPath>РесурсКартинок</DataPath>
+							<ContextMenu name="РесурсКартинокКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="РесурсКартинокРасширеннаяПодсказка" id="43"/>
+							<Events>
+								<Event name="OnChange">РесурсКартинокПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ЗаполнитьДанныеПоПодключениюПоУмолчанию" id="31">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьДанныеПоПодключениюПоУмолчанию</CommandName>
+					<ExtendedTooltip name="ЗаполнитьДанныеПоПодключениюПоУмолчаниюРасширеннаяПодсказка" id="32"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиСборкиТовара" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки сборки товара</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки сборки товара</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаНастройкиСборкиТовараРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Button name="НастройкиСборки" id="59">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.НастройкиСборки</CommandName>
+					<ExtendedTooltip name="НастройкиСборкиРасширеннаяПодсказка" id="60"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Токен" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Токен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Магазин" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ActionName" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Action name</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ExtraData" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Extra data</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сервер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Порт" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ресурс" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ресурс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДополнительныйСервер" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительный сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СерверКартинок" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РесурсКартинок" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ресурс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособОбмена" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогВыгрузки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьНастройки</Action>
+		</Command>
+		<Command name="ЗаполнитьДанныеПоПодключениюПоУмолчанию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить данные по подключению по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДанныеПоПодключениюПоУмолчанию</Action>
+		</Command>
+		<Command name="ТестСканнера" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест сканнера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест сканнера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестСканнера</Action>
+		</Command>
+		<Command name="НастройкиСборки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки сборки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиСборки</Action>
+		</Command>
+		<Command name="ЗаполнитьПараметрыСканера" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметры сканера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметры сканера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПараметрыСканера</Action>
+		</Command>
+	</Commands>
+</Form>

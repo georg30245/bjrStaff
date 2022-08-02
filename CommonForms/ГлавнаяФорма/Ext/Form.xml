@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Главная</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="НачалоРаботы" id="11">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НачалоРаботы</CommandName>
+			<ExtendedTooltip name="НачалоРаботыРасширеннаяПодсказка" id="12"/>
+		</Button>
+		<Button name="Настройки" id="5">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Настройки</CommandName>
+			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="6"/>
+		</Button>
+		<Button name="НачальноеЗаполнение" id="9">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НачальноеЗаполнение</CommandName>
+			<ExtendedTooltip name="НачальноеЗаполнениеРасширеннаяПодсказка" id="10"/>
+		</Button>
+		<Button name="ОПрограмме" id="13">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОПрограмме</CommandName>
+			<ExtendedTooltip name="ОПрограммеРасширеннаяПодсказка" id="14"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="Настройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Настройки</Action>
+		</Command>
+		<Command name="НачальноеЗаполнение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальное заполнение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальное заполнение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачальноеЗаполнение</Action>
+		</Command>
+		<Command name="НачалоРаботы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало работы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало работы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачалоРаботы</Action>
+		</Command>
+		<Command name="КомандаФормаМаркировки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда форма маркировки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда форма маркировки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаФормаМаркировки</Action>
+		</Command>
+		<Command name="ОПрограмме" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>О программе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>О программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОПрограмме</Action>
+		</Command>
+	</Commands>
+</Form>

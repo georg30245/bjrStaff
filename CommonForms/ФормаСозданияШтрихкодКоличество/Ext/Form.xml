@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Режим Штрихкод-количество</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<Page name="ГруппаДобавление" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДобавлениеРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<InputField name="Название" id="1">
+							<DataPath>Название</DataPath>
+							<ContextMenu name="НазваниеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НазваниеРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<Button name="СоздатьДокумент" id="4">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СоздатьДокумент</CommandName>
+							<ExtendedTooltip name="СоздатьДокументРасширеннаяПодсказка" id="5"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСозданные" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Созданные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа созданные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСозданныеРасширеннаяПодсказка" id="11"/>
+					<ChildItems>
+						<Table name="Сборки_Текущие" id="12">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Сборки_Текущие</DataPath>
+							<RowPictureDataPath>Сборки_Текущие.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="Сборки_ТекущиеКонтекстноеМеню" id="13"/>
+							<AutoCommandBar name="Сборки_ТекущиеКоманднаяПанель" id="14">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="Сборки_ТекущиеОбновить" id="34">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Обновить</CommandName>
+										<ExtendedTooltip name="Сборки_ТекущиеОбновитьРасширеннаяПодсказка" id="35"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="Сборки_ТекущиеРасширеннаяПодсказка" id="15"/>
+							<SearchStringAddition name="Сборки_ТекущиеСтрокаПоиска" id="16">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>Сборки_Текущие</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Сборки_ТекущиеСтрокаПоискаКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="Сборки_ТекущиеСтрокаПоискаРасширеннаяПодсказка" id="18"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Сборки_ТекущиеСостояниеПросмотра" id="19">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>Сборки_Текущие</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Сборки_ТекущиеСостояниеПросмотраКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="Сборки_ТекущиеСостояниеПросмотраРасширеннаяПодсказка" id="21"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Сборки_ТекущиеУправлениеПоиском" id="22">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>Сборки_Текущие</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="Сборки_ТекущиеУправлениеПоискомКонтекстноеМеню" id="23"/>
+								<ExtendedTooltip name="Сборки_ТекущиеУправлениеПоискомРасширеннаяПодсказка" id="24"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">Сборки_ТекущиеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="Сборки_ТекущиеНазвание" id="25">
+									<DataPath>Сборки_Текущие.Название</DataPath>
+									<ContextMenu name="Сборки_ТекущиеНазваниеКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="Сборки_ТекущиеНазваниеРасширеннаяПодсказка" id="27"/>
+								</LabelField>
+								<LabelField name="Сборки_ТекущиеСсылка" id="28">
+									<DataPath>Сборки_Текущие.Ссылка</DataPath>
+									<ContextMenu name="Сборки_ТекущиеСсылкаКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="Сборки_ТекущиеСсылкаРасширеннаяПодсказка" id="30"/>
+								</LabelField>
+								<LabelField name="Сборки_ТекущиеСтандартнаяКартинка" id="31">
+									<DataPath>Сборки_Текущие.DefaultPicture</DataPath>
+									<ContextMenu name="Сборки_ТекущиеСтандартнаяКартинкаКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="Сборки_ТекущиеСтандартнаяКартинкаРасширеннаяПодсказка" id="33"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Название" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Название</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сборки_Текущие" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сборки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Сборка.Название КАК Название,
+	Сборка.Ссылка КАК Ссылка
+ИЗ
+	Документ.Сборка КАК Сборка
+ГДЕ
+	НЕ Сборка.ПометкаУдаления
+	И НЕ Сборка.ВыгруженВЦентр
+	И Сборка.ВидДокумента = "BarcodeQuantity"</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьДокумент</Action>
+		</Command>
+		<Command name="Обновить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Действия</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<LabelDecoration name="НадписьНачалоРаботы" id="19">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало работы</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="НадписьНачалоРаботыКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="НадписьНачалоРаботыРасширеннаяПодсказка" id="21"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаИнтернетМагазин" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интернет магазин</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа интернет магазин</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаИнтернетМагазинРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Button name="ЗаказыПокупателей" id="3">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаказыПокупателей</CommandName>
+					<ExtendedTooltip name="ЗаказыПокупателейРасширеннаяПодсказка" id="4"/>
+				</Button>
+				<Button name="Сборки" id="5">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Сборки</CommandName>
+					<ExtendedTooltip name="СборкиРасширеннаяПодсказка" id="6"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИнвентаризации" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инвентаризации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаИнвентаризацииРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Button name="Инвентаризации" id="7">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Инвентаризации</CommandName>
+					<ExtendedTooltip name="ИнвентаризацииРасширеннаяПодсказка" id="8"/>
+				</Button>
+				<Button name="Маркировка" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Маркировка</CommandName>
+					<ExtendedTooltip name="МаркировкаРасширеннаяПодсказка" id="16"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрочее" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочее</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прочее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПрочееРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<Button name="ИнформацияОТоваре" id="26">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ИнформацияОТоваре</CommandName>
+					<ExtendedTooltip name="ИнформацияОТовареРасширеннаяПодсказка" id="27"/>
+				</Button>
+				<Button name="Приёмка" id="9">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Приёмка</CommandName>
+					<ExtendedTooltip name="ПриёмкаРасширеннаяПодсказка" id="10"/>
+				</Button>
+				<Button name="ПечатьЦенников" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ШтрихкодКоличество</CommandName>
+					<ExtendedTooltip name="ПечатьЦенниковРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<Button name="Уценка" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Уценка</CommandName>
+					<ExtendedTooltip name="УценкаРасширеннаяПодсказка" id="18"/>
+				</Button>
+				<Button name="Реализации" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Реализации</CommandName>
+					<ExtendedTooltip name="РеализацииРасширеннаяПодсказка" id="14"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="Сборки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сборки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сборки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сборки</Action>
+		</Command>
+		<Command name="ШтрихкодКоличество" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим Штрихкод-Количество</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод количество</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ШтрихкодКоличество</Action>
+		</Command>
+		<Command name="Приёмка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приёмка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приёмка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Приёмка</Action>
+		</Command>
+		<Command name="Реализации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализации</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="Уценка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уценка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уценка</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="Маркировка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркировка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркировка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Маркировка</Action>
+		</Command>
+		<Command name="ЗаказыПокупателей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаказыПокупателей</Action>
+		</Command>
+		<Command name="Инвентаризации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Инвентаризации</Action>
+		</Command>
+		<Command name="ИнформацияОТоваре" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о товаре</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о товаре</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнформацияОТоваре</Action>
+		</Command>
+	</Commands>
+</Form>
