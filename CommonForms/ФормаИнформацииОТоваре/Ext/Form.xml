@@ -86,5 +86,20 @@
 			</Picture>
 			<Action>ВвестиШК</Action>
 		</Command>
+		<Command name="СканироватьШКЧерезКамеру" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сканировать ШКЧерез камеру</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сканировать ШКЧерез камеру</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СканироватьШКЧерезКамеру</Action>
+		</Command>
 	</Commands>
 </Form>
